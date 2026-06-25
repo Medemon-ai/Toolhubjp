@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>お問い合わせ｜文字数カウント</title>
+    <meta name="description" content="文字数カウントへのお問い合わせはこちらから。">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+<header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3">
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+            <div>
+                <a href="index.html" class="block">
+                    <h1 class="text-2xl md:text-3xl font-bold">
+                        文字数カウント
+                    </h1>
+                </a>
+
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                    無料・高速な文字数カウンター＆分析ツール
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="about.html" class="nav-link">当サイトについて</a>
+                <a href="faq.html" class="nav-link">よくある質問</a>
+                <a href="contact.html" class="nav-link">お問い合わせ</a>
+                <a href="disclaimer.html" class="nav-link">免責事項</a>
+
+                <button id="themeToggle" class="theme-toggle">
+                    🌙
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 py-10">
+
+    <header class="mb-10">
+        <h2 class="text-3xl font-bold mb-4">
+            お問い合わせ
+        </h2>
+
+        <p class="text-slate-600 dark:text-slate-400 leading-8">
+            ご質問、ご要望、不具合報告、掲載依頼などがございましたら、
+            下記フォームよりお気軽にお問い合わせください。
+        </p>
+
+        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+            連絡先: lordabhi737@gmail.com
+        </p>
+    </header>
+
+    <form class="space-y-6">
+
+        <div>
+            <label class="block mb-2 font-medium">
+                お名前
+            </label>
+
+            <input
+                type="text"
+                placeholder="山田 太郎"
+                class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-800">
+        </div>
+
+        <div>
+            <label class="block mb-2 font-medium">
+                メールアドレス
+            </label>
+
+            <input
+                type="email"
+                placeholder="example@email.com"
+                class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-800">
+        </div>
+
+        <div>
+            <label class="block mb-2 font-medium">
+                お問い合わせ内容
+            </label>
+
+            <textarea
+                rows="8"
+                placeholder="お問い合わせ内容をご入力ください。"
+                class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-800"></textarea>
+        </div>
+
+        <button
+            type="submit"
+            class="utility-btn-primary w-full md:w-auto px-8">
+            送信する
+        </button>
+
+    </form>
+
+</main>
+
+</body>
+</html>
