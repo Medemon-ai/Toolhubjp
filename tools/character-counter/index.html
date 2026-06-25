@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>文字数カウント｜無料・高速な文字数カウンター＆テキスト分析ツール</title>
+
+    <meta name="description"
+        content="無料で使える高速な文字数カウントツール。文字数・単語数・行数・段落数・バイト数・句読点数・原稿用紙換算をリアルタイム分析。SEOタイトルやメタディスクリプションの確認にも最適。">
+
+    <meta name="keywords"
+        content="文字数カウント,文字数カウンター,文字数チェック,SEO文字数,文字数分析,日本語文字数">
+
+    <link rel="canonical" href="https://example.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="文字数カウント｜無料・高速な文字数カウンター">
+    <meta property="og:description"
+        content="文字数・単語数・行数・段落数・バイト数をリアルタイム集計できる無料ツール。">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="文字数カウント｜無料・高速">
+    <meta name="twitter:description"
+        content="リアルタイム文字数分析ツール">
+    <meta name="twitter:image" content="https://example.com/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='48'%3E✍️%3C/text%3E%3C/svg%3E">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+<header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3">
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold">
+                    文字数カウント
+                </h1>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                    無料・高速な文字数カウンター＆分析ツール
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+                
+<a href="index.html" class="nav-link">ホーム</a>
+<a href="about.html" class="nav-link">当サイトについて</a>
+<a href="faq.html" class="nav-link">よくある質問</a>
+<a href="contact.html" class="nav-link">お問い合わせ</a>
+<a href="advertise.html" class="nav-link">掲載依頼</a>
+<a href="blogs.html" class="nav-link">ブログ</a>
+
+                
+                <button id="themeToggle"
+                    class="theme-toggle">
+                    🌙
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-6 pb-32">
+
+    <!-- Ad -->
+    <div class="ad-box">
+        広告エリア (Advertisement Space)
+    </div>
+
+    <!-- Presets -->
+    <section class="mb-5">
+
+        <div class="flex flex-wrap gap-2">
+
+            <button class="preset-btn" data-limit="140">
+                Twitter (140文字)
+            </button>
+
+            <button class="preset-btn" data-limit="35">
+                SEOタイトル (35文字)
+            </button>
+
+            <button class="preset-btn" data-limit="120">
+                SEOディスクリプション (120文字)
+            </button>
+
+            <button id="clearLimitBtn" class="preset-clear">
+                上限解除
+            </button>
+
+        </div>
+
+    </section>
+
+    <section class="mb-4 flex flex-wrap gap-3">
+
+        <span id="limitStatus" class="hidden status-badge"></span>
+
+        <span id="overBadge"
+            class="hidden over-badge">
+        </span>
+
+    </section>
+
+    <!-- Upload Dropzone -->
+    <section class="mb-5">
+
+        <div
+            class="border-2 border-dashed border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 rounded-xl p-4 text-center relative">
+
+            <span
+                class="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900 px-3 py-1 text-xs font-semibold text-indigo-700 dark:text-indigo-300 mb-3">
+                🚀 近日公開
+            </span>
+
+            <div class="text-3xl mb-2">
+                📄 📕
+            </div>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+                ファイルをドラッグ＆ドロップするか、ここをクリックしてアップロード
+            </p>
+
+            <p class="text-xs text-slate-400 mt-1">
+                Word / PDF対応予定
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Textarea -->
+
+    <textarea
+        id="textInput"
+        placeholder="ここにテキストを入力してください。内容は自動保存されます。"
+        class="w-full min-h-[340px] md:min-h-[460px] resize-y rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 p-5 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-200 dark:focus:ring-indigo-800">
+    </textarea>
+
+    <!-- Utilities -->
+
+    <section class="mt-5">
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+
+            <button id="removeEmptyLines" class="utility-btn">
+                空行削除
+            </button>
+
+            <button id="removeDuplicateLines" class="utility-btn">
+                重複行削除
+            </button>
+
+            <button id="normalizeWidth" class="utility-btn">
+                全角・半角変換
+            </button>
+
+            <button id="copyBtn" class="utility-btn-primary">
+                コピー
+            </button>
+
+            <button id="clearBtn" class="utility-btn-danger">
+                クリア
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Analytics Grid -->
+
+    <section class="mt-8">
+
+        <h2 class="text-xl font-bold mb-4">
+            リアルタイム分析
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+            <div class="stat-card">
+                <span>文字数 (空白込み)</span>
+                <strong id="charWithSpaces">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>文字数 (空白抜き)</span>
+                <strong id="charWithoutSpaces">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>単語数</span>
+                <strong id="wordCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>行数</span>
+                <strong id="lineCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>段落数</span>
+                <strong id="paragraphCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>バイト数</span>
+                <strong id="byteCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>句読点数</span>
+                <strong id="punctuationCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>原稿用紙換算</span>
+                <strong id="manuscriptCount">0</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div id="toast" class="toast">
+    コピーしました
+</div>
+
+<div class="mobile-ad">
+    広告エリア (Advertisement Space)
+</div>
+
+</body>
+  </html>
