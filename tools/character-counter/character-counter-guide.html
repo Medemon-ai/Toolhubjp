@@ -1,0 +1,528 @@
+<!-- filename: character-counter-guide.html -->
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文字数カウント完全ガイド｜使い方・SEO活用・SNS文字数制限まで徹底解説</title>
+  <meta name="description" content="文字数カウントの基本から、SEOタイトル・メタディスクリプション・Twitter・原稿用紙換算まで、文字数カウンターの使い方と活用シーンを徹底解説します。">
+  <meta name="keywords" content="文字数カウント,文字数カウンター,日本語文字数カウント,SEO文字数チェック,文字数確認,文字数ツール">
+  <link rel="canonical" href="https://example.com/character-counter-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="文字数カウント完全ガイド｜使い方・SEO活用・SNS文字数制限まで徹底解説">
+  <meta property="og:description" content="文字数カウントの基本から、SEOタイトル・メタディスクリプション・Twitter・原稿用紙換算まで徹底解説します。">
+  <meta property="og:url" content="https://example.com/character-counter-guide.html">
+  <meta property="og:image" content="https://example.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="文字数カウント完全ガイド">
+  <meta name="twitter:description" content="SEO・SNS・小説執筆での文字数カウント活用法を解説">
+  <meta name="twitter:image" content="https://example.com/og-image.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='48'%3E✍️%3C/text%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      var t = localStorage.getItem('jp_char_counter_theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (t === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://example.com/" },
+      { "@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://example.com/blogs.html" },
+      { "@type": "ListItem", "position": 3, "name": "文字数カウント完全ガイド", "item": "https://example.com/character-counter-guide.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "文字数カウント完全ガイド｜使い方・SEO活用・SNS文字数制限まで徹底解説",
+    "description": "文字数カウントの基本から、SEOタイトル・メタディスクリプション・Twitter・原稿用紙換算まで、文字数カウンターの使い方と活用シーンを徹底解説します。",
+    "url": "https://example.com/character-counter-guide.html",
+    "inLanguage": "ja",
+    "author": { "@type": "Organization", "name": "文字数カウント" },
+    "publisher": { "@type": "Organization", "name": "文字数カウント", "url": "https://example.com/" },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "文字数カウントは何文字まで対応していますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ブラウザのメモリが許す限り、理論上は制限なく対応可能です。数万字を超える長文でも問題なく計測できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "スペースは文字数に含まれますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "「スペースあり」と「スペースなし」の両方をリアルタイムで表示しています。用途に応じて使い分けてください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "日本語と英語が混在するテキストでも正確にカウントできますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、日本語・英語・数字・記号が混在するテキストでも正確にカウントします。絵文字にも対応しています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "入力したテキストはどこかに保存されますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "テキストはお使いのブラウザのローカルストレージに保存されます。外部サーバーには一切送信されません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "SEOのメタディスクリプションは何文字が最適ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Googleの検索結果での表示を考えると、全角120〜130文字が理想的です。当サイトのプリセットボタンでも設定できます。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgb(199 210 254);
+      color: rgb(30 27 75);
+    }
+    .dark .article-body h2 {
+      border-color: rgba(99,102,241,.3);
+      color: rgb(224 231 255);
+    }
+    .article-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+      color: rgb(67 56 202);
+    }
+    .dark .article-body h3 {
+      color: rgb(165 180 252);
+    }
+    .article-body p {
+      line-height: 1.9;
+      margin-bottom: 1.1rem;
+      color: rgb(51 65 85);
+    }
+    .dark .article-body p {
+      color: rgb(203 213 225);
+    }
+    .article-body ul {
+      list-style: none;
+      margin-bottom: 1.25rem;
+      padding: 0;
+    }
+    .article-body ul li {
+      padding: 0.35rem 0 0.35rem 1.5rem;
+      position: relative;
+      color: rgb(51 65 85);
+      line-height: 1.75;
+    }
+    .dark .article-body ul li {
+      color: rgb(203 213 225);
+    }
+    .article-body ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: rgb(99 102 241);
+      font-size: 0.65rem;
+      top: 0.6rem;
+    }
+    .article-body strong {
+      font-weight: 700;
+      color: rgb(30 27 75);
+    }
+    .dark .article-body strong {
+      color: rgb(224 231 255);
+    }
+    .info-box {
+      background: rgb(238 242 255);
+      border: 1px solid rgb(199 210 254);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .dark .info-box {
+      background: rgba(79,70,229,.1);
+      border-color: rgba(99,102,241,.3);
+    }
+    .faq-item {
+      border: 1px solid rgb(226 232 240);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      background: white;
+    }
+    .dark .faq-item {
+      background: rgb(15 23 42);
+      border-color: rgb(30 41 59);
+    }
+    .faq-q {
+      font-weight: 700;
+      color: rgb(67 56 202);
+      margin-bottom: 0.5rem;
+    }
+    .dark .faq-q {
+      color: rgb(165 180 252);
+    }
+    .faq-a {
+      color: rgb(51 65 85);
+      line-height: 1.75;
+      margin: 0;
+    }
+    .dark .faq-a {
+      color: rgb(203 213 225);
+    }
+    .table-box {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .table-box table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .table-box th {
+      background: rgb(238 242 255);
+      color: rgb(67 56 202);
+      font-weight: 700;
+      padding: 0.7rem 1rem;
+      text-align: left;
+      border-bottom: 2px solid rgb(199 210 254);
+    }
+    .dark .table-box th {
+      background: rgba(79,70,229,.15);
+      color: rgb(165 180 252);
+      border-color: rgba(99,102,241,.3);
+    }
+    .table-box td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid rgb(226 232 240);
+      color: rgb(51 65 85);
+    }
+    .dark .table-box td {
+      border-color: rgb(30 41 59);
+      color: rgb(203 213 225);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div>
+          <a href="index.html" class="block">
+            <h1 class="text-2xl md:text-3xl font-bold">文字数カウント</h1>
+            <p class="text-sm text-slate-500 dark:text-slate-400">無料・高速な文字数カウンター＆分析ツール</p>
+          </a>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 text-sm">
+          <a href="index.html" class="nav-link">ホーム</a>
+          <a href="about.html" class="nav-link">当サイトについて</a>
+          <a href="faq.html" class="nav-link">よくある質問</a>
+          <a href="contact.html" class="nav-link">お問い合わせ</a>
+          <a href="advertise.html" class="nav-link">掲載依頼</a>
+          <a href="blogs.html" class="nav-link">ブログ</a>
+          <button id="themeToggle" class="theme-toggle">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-8 pb-20">
+
+    <!-- Ad -->
+    <div class="ad-box mb-6">広告エリア (Advertisement Space)</div>
+
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-slate-400 dark:text-slate-500 mb-6 flex flex-wrap gap-1 items-center">
+      <a href="index.html" class="hover:text-indigo-500 transition-colors">ホーム</a>
+      <span>›</span>
+      <a href="blogs.html" class="hover:text-indigo-500 transition-colors">ブログ</a>
+      <span>›</span>
+      <span class="text-slate-500 dark:text-slate-400">文字数カウント完全ガイド</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+      <!-- Main Article -->
+      <article class="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 md:p-10">
+
+        <div class="mb-6">
+          <div class="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900/40 px-3 py-1 text-xs font-semibold text-indigo-700 dark:text-indigo-300 mb-4">
+            ✍️ ライティングガイド
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold leading-tight text-slate-900 dark:text-slate-100">
+            文字数カウント完全ガイド
+          </h2>
+          <p class="text-sm text-slate-400 dark:text-slate-500 mt-2">使い方・SEO活用・SNS文字数制限まで徹底解説</p>
+          <time class="text-xs text-slate-400 dark:text-slate-500 mt-1 block" datetime="2025-01-01">2025年1月公開</time>
+        </div>
+
+        <div class="article-body">
+
+          <p>文字数カウントは、テキストに含まれる文字の総数を正確に把握するための機能です。一見シンプルに見えますが、SEOライティング、SNSの投稿管理、小説の執筆、ビジネス文書の作成など、実に幅広い場面で活躍する実用的なツールです。本記事では、文字数カウントの基礎から実践的な活用法まで、具体的に解説していきます。</p>
+
+          <h2>文字数カウントとは何か？</h2>
+
+          <p>文字数カウントとは、テキストに含まれる文字を一つひとつ数え、その合計を表示する機能のことです。現代のテキストエディタやWebサービスにはほぼ標準で搭載されていますが、詳細な分析機能（バイト数・原稿用紙換算・句読点数など）を備えた専用ツールは特に便利です。</p>
+
+          <p>日本語のテキストを扱う際に特に重要になるのが文字数カウントです。英語では「単語数（ワードカウント）」が一般的な指標として使われますが、日本語はスペースで単語を区切らないため、文字数が主要な計測単位となります。「あいうえお」なら5文字、「東京は日本の首都です。」なら11文字（句読点含む）というように、文字ひとつひとつを数えます。</p>
+
+          <div class="info-box">
+            <strong>ポイント：</strong>日本語では「単語数」より「文字数」が重要な指標です。英語の「Word Count」に相当する概念として、日本語では「文字数カウント」が使われます。
+          </div>
+
+          <h2>文字数カウントが必要な理由</h2>
+
+          <p>文字数を正確に把握することで、多くの場面での品質が向上します。制限を超えた文章が送信エラーになる前に気づけたり、SEO上の最適な長さを維持できたりと、実用的なメリットは思っている以上に多いものです。</p>
+
+          <h3>SEOライティングでの文字数管理</h3>
+
+          <p>検索エンジン最適化（SEO）において、文字数の管理は非常に重要です。以下の要素それぞれに適切な文字数の目安があります。</p>
+
+          <div class="table-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>要素</th>
+                  <th>推奨文字数（全角）</th>
+                  <th>理由</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>SEOタイトル</td><td>28〜35文字</td><td>Googleの検索結果で省略されない長さ</td></tr>
+                <tr><td>メタディスクリプション</td><td>120〜130文字</td><td>スニペット表示の上限に合わせる</td></tr>
+                <tr><td>H1見出し</td><td>20〜40文字</td><td>主要キーワードを含め、簡潔に</td></tr>
+                <tr><td>記事本文</td><td>2,000文字以上</td><td>検索意図に応える十分な情報量</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>SEOタイトルが長すぎると、Googleの検索結果画面で「...」と途中で切れてしまい、ユーザーに内容が伝わりません。逆に短すぎると、キーワードを入れる余地がなくなります。文字数カウンターを使ってリアルタイムに確認しながら書くことで、最初から最適な長さに調整できます。</p>
+
+          <p>記事本文については、単純に文字数を増やせばよいというわけではありませんが、一般的に2,000〜3,000文字以上のコンテンツが、検索上位に表示されやすい傾向があります。ユーザーの検索意図に応えるだけの情報量を確保することが大切です。</p>
+
+          <h3>SNSごとの文字数制限</h3>
+
+          <p>各SNSプラットフォームには投稿できる文字数に上限が設けられています。事前に確認して、投稿直前のエラーを防ぎましょう。</p>
+
+          <div class="table-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>プラットフォーム</th>
+                  <th>文字数制限</th>
+                  <th>備考</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>X（旧Twitter）</td><td>140文字</td><td>日本語・英語共通、URLは短縮される</td></tr>
+                <tr><td>Instagram</td><td>2,200文字</td><td>キャプション最大。ハッシュタグも含む</td></tr>
+                <tr><td>Facebook</td><td>63,206文字</td><td>実質的に無制限に近い</td></tr>
+                <tr><td>LINE</td><td>500文字/メッセージ</td><td>個人チャット・グループ共通</td></tr>
+                <tr><td>note</td><td>制限なし</td><td>長文コンテンツ向け</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>特にX（旧Twitter）の140文字制限は厳しく、日本語でも英語でも同じ上限が適用されます。当サイトのプリセットボタン「Twitter（140文字）」を使えば、上限を設定した状態でリアルタイムにカウントできるので非常に便利です。</p>
+
+          <h3>小説・原稿用紙換算での活用</h3>
+
+          <p>小説家や作家にとって、文字数カウントは執筆の基本的な管理ツールです。日本の原稿用紙は1枚あたり400文字が標準とされており、文字数を原稿用紙の枚数に換算することで、作品の長さを直感的に把握できます。</p>
+
+          <div class="info-box">
+            <strong>原稿用紙換算の目安：</strong><br>
+            短編小説：5,000〜20,000文字（原稿用紙約12〜50枚）<br>
+            中編小説：20,000〜60,000文字（約50〜150枚）<br>
+            長編小説：60,000文字以上（150枚以上）
+          </div>
+
+          <p>出版社への投稿や文学賞への応募には「○万字以内」「原稿用紙○枚以内」といった指定がよくあります。文字数カウンターで正確に管理しておくことで、規定を超えて後から大幅に削除する手間を省けます。</p>
+
+          <h2>文字数カウントと単語数の違い</h2>
+
+          <p>「文字数」と「単語数」はよく混同されますが、まったく異なる概念です。</p>
+
+          <p><strong>文字数（Character Count）</strong>とは、テキスト内の文字を一つひとつ数えたものです。日本語の「あ」「東」も、英語の「a」「Z」も、数字の「1」「9」も、それぞれ「1文字」としてカウントします。スペースや改行を含むかどうかで「スペースあり」「スペースなし」の2種類があります。</p>
+
+          <p><strong>単語数（Word Count）</strong>とは、スペースで区切られた単語の数を数えたものです。英語の「Hello World」は2単語ですが、日本語の「こんにちは世界」はスペースで区切られないため、通常は1単語として認識されます。これが、日本語テキストの長さを測る指標として「単語数」より「文字数」が適している理由です。</p>
+
+          <h2>スペースありとスペースなし、どちらを使う？</h2>
+
+          <p>文字数カウントには「スペースを含む」と「スペースを除く」の2種類があります。用途によって使い分けるのがコツです。</p>
+
+          <ul>
+            <li><strong>スペースを含む文字数</strong>：テキスト全体の分量を把握したいとき。Twitterの制限チェック（スペースも1文字としてカウントされる）など</li>
+            <li><strong>スペースを除く文字数</strong>：純粋な文章量を測りたいとき。原稿用紙換算や「○文字以上」の課題達成確認に適している</li>
+          </ul>
+
+          <p>当サイトの文字数カウンターは、両方の値をリアルタイムで表示します。どちらの基準で測るべきか迷ったときは、課題や媒体の規定を確認するのが一番確実です。</p>
+
+          <h2>バイト数とは？なぜ重要か</h2>
+
+          <p>バイト数は、テキストをデジタルデータとして扱うときのデータ量を示す指標です。UTF-8エンコーディングの場合、文字の種類によってバイト数が異なります。</p>
+
+          <ul>
+            <li>半角英数字・記号：1文字 = 1バイト</li>
+            <li>半角カタカナ：1文字 = 3バイト</li>
+            <li>ひらがな・カタカナ・漢字：1文字 = 3バイト</li>
+            <li>一部の特殊文字・絵文字：1文字 = 4バイト</li>
+          </ul>
+
+          <p>つまり、日本語のテキスト100文字は約300バイトになります。データベースのカラムサイズ設定やAPIの入力制限がバイト数で規定されている場合、文字数だけを見ていると思わぬ上限超過が起きることがあります。開発者やデータ管理を行う人にとって、バイト数の確認は重要な作業です。</p>
+
+          <h2>当サイトの文字数カウンターの使い方</h2>
+
+          <p><a href="index.html" class="text-indigo-600 dark:text-indigo-400 hover:underline">当サイトの文字数カウンター</a>は、以下の手順でかんたんに使えます。</p>
+
+          <ul>
+            <li>テキストエリアに文章を貼り付けるか、直接入力する</li>
+            <li>文字数・単語数・行数・段落数・バイト数・句読点数・原稿用紙換算が即座に表示される</li>
+            <li>プリセットボタン（Twitter・SEOタイトルなど）で上限を設定すると、超過した際に警告が表示される</li>
+            <li>テキストはブラウザのローカルストレージに自動保存されるため、ページを閉じても内容が残る</li>
+          </ul>
+
+          <p>入力内容はサーバーに送信されないため、機密性の高い文章でも安心して利用できます。</p>
+
+          <h2>よくある質問（FAQ）</h2>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. 文字数カウントは何文字まで対応していますか？</p>
+            <p class="faq-a">ブラウザのメモリが許す限り、理論上は制限なく対応可能です。数万字を超える長文でも問題なく計測できます。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. スペースは文字数に含まれますか？</p>
+            <p class="faq-a">「スペースあり」と「スペースなし」の両方をリアルタイムで表示しています。用途に応じて使い分けてください。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. 日本語と英語が混在するテキストでも正確にカウントできますか？</p>
+            <p class="faq-a">はい、日本語・英語・数字・記号が混在するテキストでも正確にカウントします。絵文字にも対応しています。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. 入力したテキストはサーバーに送信されますか？</p>
+            <p class="faq-a">いいえ、テキストはお使いのブラウザのローカルストレージに保存されるだけで、外部サーバーには一切送信されません。機密文書にも安心して使えます。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. SEOのメタディスクリプションは何文字が最適ですか？</p>
+            <p class="faq-a">Googleの検索結果での表示を考えると、全角120〜130文字が理想的です。当サイトのプリセットボタンを使えば、上限を設定してリアルタイムに確認できます。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. 原稿用紙換算の計算方法は？</p>
+            <p class="faq-a">スペースを除いた文字数を400で割った値が原稿用紙の枚数です。例えば2,000文字なら5枚分になります。</p>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-8 p-6 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800/40 rounded-2xl text-center">
+            <p class="font-bold text-lg text-slate-900 dark:text-slate-100 mb-2">さっそく文字数を数えてみましょう</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">無料・登録不要・ブラウザだけで動作します</p>
+            <a href="index.html"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold transition-colors">
+              ✍️ 文字数カウンターを使う
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-1 flex flex-col gap-4">
+
+        <!-- Ad -->
+        <div class="ad-box flex-shrink-0" style="height: 250px; flex-direction: column; gap: 0.5rem;">
+          <span style="font-size: 0.75rem;">広告</span>
+          <span style="font-size: 0.75rem;">Advertisement</span>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
+          <h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 mb-3">関連記事</h3>
+          <div class="flex flex-col gap-3">
+            <a href="pdf-compression-guide.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline leading-snug">📄 PDF圧縮とは？仕組み・メリット・使い方</a>
+            <a href="image-compression-guide.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline leading-snug">🖼️ 画像圧縮とは？サイズを小さくする方法</a>
+            <a href="blogs.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">← ブログ一覧へ</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
+          <h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 mb-3">ツール</h3>
+          <a href="index.html" class="inline-flex items-center gap-1 text-sm text-indigo-600 dark:text-indigo-400 hover:underline">✍️ 文字数カウンターを使う</a>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <div id="toast" class="toast">コピーしました</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('themeToggle');
+      function applyTheme(t) {
+        if (t === 'dark') {
+          document.documentElement.classList.add('dark');
+          if (btn) btn.textContent = '☀️';
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (btn) btn.textContent = '🌙';
+        }
+      }
+      var saved = localStorage.getItem('jp_char_counter_theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      applyTheme(saved);
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var isDark = document.documentElement.classList.contains('dark');
+          var next = isDark ? 'light' : 'dark';
+          localStorage.setItem('jp_char_counter_theme', next);
+          applyTheme(next);
+        });
+      }
+    });
+  </script>
+</body>
+  </html>
+  
