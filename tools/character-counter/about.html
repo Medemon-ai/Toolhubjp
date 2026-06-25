@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>当サイトについて｜文字数カウント</title>
+    <meta name="description" content="文字数カウントについて。高速・無料・安全なブラウザ完結型の文字数カウンターツールです。">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+<header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3">
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+            <div>
+                <a href="index.html" class="block">
+                    <h1 class="text-2xl md:text-3xl font-bold">
+                        文字数カウント
+                    </h1>
+                </a>
+
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                    無料・高速な文字数カウンター＆分析ツール
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="about.html" class="nav-link">当サイトについて</a>
+                <a href="faq.html" class="nav-link">よくある質問</a>
+                <a href="contact.html" class="nav-link">お問い合わせ</a>
+                <a href="disclaimer.html" class="nav-link">免責事項</a>
+
+                <button id="themeToggle" class="theme-toggle">
+                    🌙
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 py-10">
+
+    <article class="space-y-8">
+
+        <header>
+            <h2 class="text-3xl font-bold mb-4">
+                当サイトについて
+            </h2>
+
+            <p class="text-lg text-slate-600 dark:text-slate-400 leading-8">
+                「文字数カウント」は、ライター、SEO担当者、マーケター、学生、
+                研究者など、文章を扱うすべての方のために開発された
+                無料の文字数分析ツールです。
+            </p>
+        </header>
+
+        <section class="space-y-4">
+            <h3 class="text-xl font-semibold">
+                高速でストレスのない操作性
+            </h3>
+
+            <p class="leading-8 text-slate-600 dark:text-slate-400">
+                入力したテキストはリアルタイムで解析され、
+                文字数、単語数、行数、段落数、バイト数、
+                句読点数などを瞬時に確認できます。
+                ページの再読み込みを行わず、快適に作業を続けられます。
+            </p>
+        </section>
+
+        <section class="space-y-4">
+            <h3 class="text-xl font-semibold">
+                完全無料
+            </h3>
+
+            <p class="leading-8 text-slate-600 dark:text-slate-400">
+                本ツールは無料でご利用いただけます。
+                会員登録やサブスクリプション契約は不要です。
+                必要なときにすぐ利用できるシンプルな設計を重視しています。
+            </p>
+        </section>
+
+        <section class="space-y-4">
+            <h3 class="text-xl font-semibold">
+                ブラウザ完結で安全
+            </h3>
+
+            <p class="leading-8 text-slate-600 dark:text-slate-400">
+                テキスト解析はお使いのブラウザ内で実行されます。
+                入力内容が外部サーバーへ送信されることはなく、
+                プライバシーと安全性を重視した構成になっています。
+            </p>
+        </section>
+
+        <section class="space-y-4">
+            <h3 class="text-xl font-semibold">
+                今後のアップデート
+            </h3>
+
+            <p class="leading-8 text-slate-600 dark:text-slate-400">
+                将来的にはWordファイルやPDFファイルの読み込み、
+                より高度な文章分析機能、
+                SEO向けの最適化支援機能などを追加予定です。
+            </p>
+        </section>
+
+    </article>
+
+</main>
+
+</body>
+</html>
