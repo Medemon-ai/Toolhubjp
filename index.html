@@ -40,9 +40,36 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-indigo-100 selection:text-indigo-900">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
 
-    <header class="w-full bg-white border-b border-slate-200 py-8 px-4 sm:px-6 lg:px-8">
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            
+            <a href="./index.html" class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white">
+                京都ツール <span class="text-xs font-normal text-slate-400">KyotoTools</span>
+            </a>
+
+            <div class="flex items-center gap-4 sm:gap-6">
+                <div class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300">
+                    <a href="./index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">ホーム</a>
+                    <a href="./about.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">当サイトについて</a>
+                    <a href="./faq.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">よくある質問</a>
+                    <a href="./privacy.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">プライバシーポリシー</a>
+                    <a href="./disclaimer.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">免責事項</a>
+                    <a href="./contact.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">お問い合わせ</a>
+                </div>
+
+                <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-xl transition-colors" aria-label="テーマ切り替え">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    
+    
+  <header class="w-full bg-white border-b border-slate-200 py-8 px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto flex flex-col items-center text-center">
             <h1 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight flex items-center gap-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -130,6 +157,43 @@
             </p>
         </div>
     </footer>
+    <script>
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // Toggle icon visibility based on current theme state
+    if (document.documentElement.classList.contains('dark')) {
+        themeToggleLightIcon.classList.remove('hidden');
+    } else {
+        themeToggleDarkIcon.classList.remove('hidden');
+    }
+
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    themeToggleBtn.addEventListener('click', function() {
+        themeToggleDarkIcon.classList.toggle('hidden');
+        themeToggleLightIcon.classList.toggle('hidden');
+
+        // Logic to swap theme state and update localStorage memory
+        if (localStorage.getItem('theme')) {
+            if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+    });
+    </script>
+    
 
 </body>
 </html>
