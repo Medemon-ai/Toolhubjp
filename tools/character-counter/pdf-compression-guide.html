@@ -1,0 +1,527 @@
+<!-- filename: pdf-compression-guide.html -->
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF圧縮とは？仕組み・メリット・無料ツールの使い方完全ガイド</title>
+  <meta name="description" content="PDF圧縮の仕組みとメリットをわかりやすく解説。メール添付・アップロードを快適にするPDF軽量化の方法、無料PDF圧縮ツールの使い方も紹介します。">
+  <meta name="keywords" content="PDF圧縮,PDFサイズ削減,PDF軽量化,PDF容量を小さくする,無料PDF圧縮,PDFファイルサイズ">
+  <link rel="canonical" href="https://example.com/pdf-compression-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="PDF圧縮とは？仕組み・メリット・無料ツールの使い方完全ガイド">
+  <meta property="og:description" content="PDF圧縮の仕組みとメリットをわかりやすく解説。メール添付・アップロードを快適にするPDF軽量化の方法を紹介します。">
+  <meta property="og:url" content="https://example.com/pdf-compression-guide.html">
+  <meta property="og:image" content="https://example.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PDF圧縮とは？仕組み・メリット・無料ツールの使い方">
+  <meta name="twitter:description" content="PDF軽量化の仕組みとメリット、無料ツールの使い方を解説">
+  <meta name="twitter:image" content="https://example.com/og-image.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='48'%3E✍️%3C/text%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      var t = localStorage.getItem('jp_char_counter_theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (t === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://example.com/" },
+      { "@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://example.com/blogs.html" },
+      { "@type": "ListItem", "position": 3, "name": "PDF圧縮とは？仕組み・メリット・使い方", "item": "https://example.com/pdf-compression-guide.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "PDF圧縮とは？仕組み・メリット・無料ツールの使い方完全ガイド",
+    "description": "PDF圧縮の仕組みとメリットをわかりやすく解説。メール添付・アップロードを快適にするPDF軽量化の方法、無料PDF圧縮ツールの使い方も紹介します。",
+    "url": "https://example.com/pdf-compression-guide.html",
+    "inLanguage": "ja",
+    "author": { "@type": "Organization", "name": "文字数カウント" },
+    "publisher": { "@type": "Organization", "name": "文字数カウント", "url": "https://example.com/" },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "PDF圧縮するとファイルの内容は変わりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "テキストや文書の内容は変わりません。主に埋め込み画像の品質や不要なメタデータが最適化されます。ただし強い圧縮をかけた場合、画像が多いPDFでは画質が多少低下することがあります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "PDF圧縮後にパスワードは維持されますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ツールによって異なります。パスワード付きPDFを圧縮する場合は、事前にパスワードを解除するか、パスワード保持に対応したツールを使用してください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "何MBまでのPDFを圧縮できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "easypdfcompress.comでは、ブラウザ上でPDFを処理するため、ファイルサイズの上限は主にお使いのデバイスのメモリに依存します。一般的な用途であれば100MB以上のファイルも処理可能です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "圧縮したPDFをアップロードしても安全ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "easypdfcompress.comはブラウザ内で処理を完結させており、PDFファイルを外部サーバーに送信しません。機密文書でも安心してご利用いただけます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "PDF圧縮でどのくらいサイズが小さくなりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PDFの内容によって異なりますが、画像を多く含むPDFでは50〜80%の削減が可能なケースもあります。テキスト主体のPDFは元々ファイルサイズが小さいことが多く、圧縮率は控えめになる場合があります。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgb(199 210 254);
+      color: rgb(30 27 75);
+    }
+    .dark .article-body h2 {
+      border-color: rgba(99,102,241,.3);
+      color: rgb(224 231 255);
+    }
+    .article-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+      color: rgb(67 56 202);
+    }
+    .dark .article-body h3 {
+      color: rgb(165 180 252);
+    }
+    .article-body p {
+      line-height: 1.9;
+      margin-bottom: 1.1rem;
+      color: rgb(51 65 85);
+    }
+    .dark .article-body p {
+      color: rgb(203 213 225);
+    }
+    .article-body ul {
+      list-style: none;
+      margin-bottom: 1.25rem;
+      padding: 0;
+    }
+    .article-body ul li {
+      padding: 0.35rem 0 0.35rem 1.5rem;
+      position: relative;
+      color: rgb(51 65 85);
+      line-height: 1.75;
+    }
+    .dark .article-body ul li {
+      color: rgb(203 213 225);
+    }
+    .article-body ul li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: rgb(99 102 241);
+      font-size: 0.65rem;
+      top: 0.6rem;
+    }
+    .article-body strong {
+      font-weight: 700;
+      color: rgb(30 27 75);
+    }
+    .dark .article-body strong {
+      color: rgb(224 231 255);
+    }
+    .info-box {
+      background: rgb(238 242 255);
+      border: 1px solid rgb(199 210 254);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .dark .info-box {
+      background: rgba(79,70,229,.1);
+      border-color: rgba(99,102,241,.3);
+    }
+    .faq-item {
+      border: 1px solid rgb(226 232 240);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      background: white;
+    }
+    .dark .faq-item {
+      background: rgb(15 23 42);
+      border-color: rgb(30 41 59);
+    }
+    .faq-q {
+      font-weight: 700;
+      color: rgb(67 56 202);
+      margin-bottom: 0.5rem;
+    }
+    .dark .faq-q {
+      color: rgb(165 180 252);
+    }
+    .faq-a {
+      color: rgb(51 65 85);
+      line-height: 1.75;
+      margin: 0;
+    }
+    .dark .faq-a {
+      color: rgb(203 213 225);
+    }
+    .table-box {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .table-box table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .table-box th {
+      background: rgb(238 242 255);
+      color: rgb(67 56 202);
+      font-weight: 700;
+      padding: 0.7rem 1rem;
+      text-align: left;
+      border-bottom: 2px solid rgb(199 210 254);
+    }
+    .dark .table-box th {
+      background: rgba(79,70,229,.15);
+      color: rgb(165 180 252);
+      border-color: rgba(99,102,241,.3);
+    }
+    .table-box td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid rgb(226 232 240);
+      color: rgb(51 65 85);
+    }
+    .dark .table-box td {
+      border-color: rgb(30 41 59);
+      color: rgb(203 213 225);
+    }
+    .tool-highlight {
+      background: white;
+      border: 2px solid rgb(199 210 254);
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .dark .tool-highlight {
+      background: rgb(15 23 42);
+      border-color: rgba(99,102,241,.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div>
+          <a href="index.html" class="block">
+            <h1 class="text-2xl md:text-3xl font-bold">文字数カウント</h1>
+            <p class="text-sm text-slate-500 dark:text-slate-400">無料・高速な文字数カウンター＆分析ツール</p>
+          </a>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 text-sm">
+          <a href="index.html" class="nav-link">ホーム</a>
+          <a href="about.html" class="nav-link">当サイトについて</a>
+          <a href="faq.html" class="nav-link">よくある質問</a>
+          <a href="contact.html" class="nav-link">お問い合わせ</a>
+          <a href="advertise.html" class="nav-link">掲載依頼</a>
+          <a href="blogs.html" class="nav-link">ブログ</a>
+          <button id="themeToggle" class="theme-toggle">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-8 pb-20">
+
+    <!-- Ad -->
+    <div class="ad-box mb-6">広告エリア (Advertisement Space)</div>
+
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-slate-400 dark:text-slate-500 mb-6 flex flex-wrap gap-1 items-center">
+      <a href="index.html" class="hover:text-indigo-500 transition-colors">ホーム</a>
+      <span>›</span>
+      <a href="blogs.html" class="hover:text-indigo-500 transition-colors">ブログ</a>
+      <span>›</span>
+      <span class="text-slate-500 dark:text-slate-400">PDF圧縮とは？仕組み・メリット・使い方</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+      <!-- Main Article -->
+      <article class="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 md:p-10">
+
+        <div class="mb-6">
+          <div class="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900/40 px-3 py-1 text-xs font-semibold text-indigo-700 dark:text-indigo-300 mb-4">
+            📄 PDFガイド
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold leading-tight text-slate-900 dark:text-slate-100">
+            PDF圧縮とは？仕組み・メリット・使い方
+          </h2>
+          <p class="text-sm text-slate-400 dark:text-slate-500 mt-2">PDFのファイルサイズを小さくする方法と活用シーンを徹底解説</p>
+          <time class="text-xs text-slate-400 dark:text-slate-500 mt-1 block" datetime="2025-01-01">2025年1月公開</time>
+        </div>
+
+        <div class="article-body">
+
+          <p>PDFファイルを送ろうとしたとき「ファイルサイズが大きすぎる」というエラーが出て困った経験はありませんか？仕事の書類や履歴書、企画書など、PDFは現代のビジネスやプライベートに欠かせないファイル形式ですが、画像を多く含むと数十MBにもなることがあります。本記事では、PDF圧縮の仕組みから具体的なメリット、実践的な使い方までわかりやすく解説します。</p>
+
+          <h2>PDF圧縮とは何か？</h2>
+
+          <p>PDF圧縮とは、PDFファイルのデータ量を削減して、ファイルサイズを小さくする処理のことです。英語では「PDF Compression」や「PDF Optimization」とも呼ばれます。</p>
+
+          <p>PDFのファイルサイズが大きくなる主な原因は、埋め込まれた画像データです。スキャンした書類や写真を多く含むPDFは、何も対処しなければ数十MBになることも珍しくありません。PDF圧縮ツールはこれらの画像データを最適化し、視覚的な品質をできるだけ保ちながらデータ量を削減します。</p>
+
+          <div class="info-box">
+            <strong>PDF圧縮で主に最適化される要素：</strong><br>
+            埋め込み画像の解像度調整・不要なメタデータの削除・フォントデータの最適化・透明レイヤーのフラット化・未使用リソースの除去
+          </div>
+
+          <h2>なぜPDFのファイルサイズが重要なのか？</h2>
+
+          <p>PDFのファイルサイズを気にする必要がある理由は複数あります。日常的な業務で感じる不便の多くが、実はPDFの重さに起因しています。</p>
+
+          <h3>メールの添付ファイル制限</h3>
+
+          <p>多くのメールサービスには、添付ファイルのサイズ制限があります。代表的なサービスの制限は以下のとおりです。</p>
+
+          <div class="table-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>メールサービス</th>
+                  <th>添付ファイルの上限</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Gmail</td><td>25MB（受信・送信とも）</td></tr>
+                <tr><td>Outlook（Microsoft 365）</td><td>20〜25MB</td></tr>
+                <tr><td>Yahoo!メール</td><td>25MB</td></tr>
+                <tr><td>iCloud メール</td><td>20MB</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>スキャン画像を含む契約書や報告書は、あっという間に20MBを超えることがあります。PDF圧縮をしておくことで、こうした制限に引っかかるリスクをなくせます。圧縮後のPDFをメールに添付する習慣をつけるだけで、送受信のトラブルが大幅に減ります。</p>
+
+          <h3>クラウドアップロードの速度改善</h3>
+
+          <p>Google ドライブ、Dropbox、OneDriveなどへのアップロードは、ファイルが重いほど時間がかかります。特に回線速度が不安定なモバイル環境では、10MBのPDFと1MBのPDFでは体感できるほど速度に差が出ます。</p>
+
+          <p>企業の申請システムや政府機関の電子申請ポータルでは、アップロードできるファイルサイズに厳格な上限が設けられているケースも多いです。事前にPDFを圧縮しておけば、「ファイルが大きすぎます」のエラーを回避できます。</p>
+
+          <h3>ストレージの節約</h3>
+
+          <p>毎日大量のPDFを扱う業種（不動産・医療・法律・会計など）では、PDFファイルが占めるストレージ容量が膨大になります。ファイルサイズを半分に圧縮できれば、保存コストもほぼ半分になります。クラウドストレージの月額コストを抑えたい企業にとっても、PDF圧縮は有効なコスト管理手段です。</p>
+
+          <h3>Webサイトへの掲載・ダウンロード速度</h3>
+
+          <p>会社案内や製品カタログ、申請書などのPDFをWebサイトに掲載する場合、ファイルが重いとダウンロードや表示に時間がかかり、ユーザーが途中で離脱してしまいます。軽量化されたPDFは表示が速く、モバイルユーザーにも快適な体験を提供できます。</p>
+
+          <h2>PDF圧縮の技術的な仕組み</h2>
+
+          <p>PDF圧縮がどのように機能するかを大まかに理解しておくと、ツールの使い方や圧縮率の期待値をより正確に把握できます。</p>
+
+          <h3>画像の再圧縮</h3>
+
+          <p>PDFに埋め込まれた画像は、もともとJPEGやPNGなどの形式で保存されています。PDF圧縮ツールはこれらの画像を再圧縮し、解像度を適切な値（例：印刷不要なら72〜150dpiに下げる）に調整します。画像が多いPDFほど、この処理で大きな効果が得られます。</p>
+
+          <h3>可逆圧縮と非可逆圧縮</h3>
+
+          <p><strong>可逆圧縮（Lossless）</strong>は、データを完全に元通りに復元できる圧縮方式です。品質を落とさずにサイズを小さくできますが、削減効果は限定的です。テキスト中心のPDFに向いています。</p>
+
+          <p><strong>非可逆圧縮（Lossy）</strong>は、人間の目には判別しにくい細かなデータを削除することで、より大きなサイズ削減を実現します。画像中心のPDFで高い圧縮率が期待できます。印刷用途には注意が必要ですが、Web掲載や電子送付には十分な品質が保てます。</p>
+
+          <h3>不要データの除去</h3>
+
+          <p>PDFには、作成ソフトが自動的に付加するメタデータ、埋め込みサムネイル、使われていないフォントデータなどが含まれていることがあります。これらの不要なデータを除去するだけでも、ファイルサイズが数十KB〜数MB削減されるケースがあります。</p>
+
+          <h2>無料でPDF圧縮を試す方法</h2>
+
+          <p>PDF圧縮には様々なツールがありますが、ソフトウェアのインストールが不要で、すぐにブラウザから使えるオンラインツールが最も手軽です。</p>
+
+          <div class="tool-highlight">
+            <div class="flex items-start gap-4">
+              <div class="text-3xl">📄</div>
+              <div>
+                <h3 style="margin-top: 0; margin-bottom: 0.5rem;">EasyPDF Compress</h3>
+                <p style="margin-bottom: 0.75rem;">PDF圧縮が手軽にできるブラウザツールとして、<a href="https://easypdfcompress.com" target="_blank" rel="noopener" class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">easypdfcompress.com</a> を使ってみてください。ファイルをドラッグ＆ドロップするだけで圧縮が完了します。ブラウザ上で処理が完結するため、PDFが外部サーバーにアップロードされることはなく、機密文書も安心して使えます。アカウント登録も不要です。</p>
+                <a href="https://easypdfcompress.com" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold transition-colors">
+                  PDFを圧縮してみる →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h2>PDF圧縮の手順（一般的なフロー）</h2>
+
+          <p>オンラインのPDF圧縮ツールを使う場合、手順は非常にシンプルです。</p>
+
+          <ul>
+            <li>圧縮したいPDFファイルをツールにドラッグ＆ドロップ、またはファイル選択ボタンで読み込む</li>
+            <li>圧縮レベルを選択する（低・中・高など）</li>
+            <li>「圧縮」ボタンをクリックして処理を開始する</li>
+            <li>圧縮後のファイルをダウンロードする</li>
+            <li>元のファイルと圧縮後のファイルのサイズを比較して確認する</li>
+          </ul>
+
+          <h2>PDF圧縮の注意点</h2>
+
+          <p>PDF圧縮には多くのメリットがありますが、いくつかの点に注意が必要です。</p>
+
+          <h3>印刷用途への影響</h3>
+
+          <p>高解像度の印刷（チラシ・ポスターなど）を目的としたPDFに強い圧縮をかけると、印刷時に画像がぼやける場合があります。印刷用のPDFは可能な限り非可逆圧縮を避けるか、圧縮レベルを控えめに設定しましょう。</p>
+
+          <h3>圧縮後の確認</h3>
+
+          <p>圧縮後のPDFは必ず内容を確認してください。特に表内の小さな文字や細かいグラフが正確に表示されているか確認することをおすすめします。問題があれば圧縮レベルを下げて再試行してください。</p>
+
+          <h3>元ファイルのバックアップ</h3>
+
+          <p>圧縮前の元PDFは必ずバックアップとして保管しておきましょう。万が一圧縮後のファイルで問題が発生したときに、元データから作り直すことができます。</p>
+
+          <h2>よくある質問（FAQ）</h2>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. PDF圧縮するとファイルの内容は変わりますか？</p>
+            <p class="faq-a">テキストや文書の内容は変わりません。主に埋め込み画像の品質や不要なメタデータが最適化されます。ただし強い圧縮をかけた場合、画像が多いPDFでは画質が多少低下することがあります。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. PDF圧縮後にパスワードは維持されますか？</p>
+            <p class="faq-a">ツールによって異なります。パスワード付きPDFを圧縮する場合は、事前にパスワードを解除するか、パスワード保持に対応したツールを使用してください。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. 何MBまでのPDFを圧縮できますか？</p>
+            <p class="faq-a">easypdfcompress.comでは、ブラウザ上でPDFを処理するため、ファイルサイズの上限は主にお使いのデバイスのメモリに依存します。一般的な用途であれば100MB以上のファイルも処理可能です。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. 圧縮したPDFをアップロードしても安全ですか？</p>
+            <p class="faq-a">easypdfcompress.comはブラウザ内で処理を完結させており、PDFファイルを外部サーバーに送信しません。機密文書でも安心してご利用いただけます。</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Q. PDF圧縮でどのくらいサイズが小さくなりますか？</p>
+            <p class="faq-a">PDFの内容によって異なりますが、画像を多く含むPDFでは50〜80%の削減が可能なケースもあります。テキスト主体のPDFは元々ファイルサイズが小さいことが多く、圧縮率は控えめになる場合があります。</p>
+          </div>
+
+          <!-- Internal Links -->
+          <div class="mt-8 p-5 bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 rounded-2xl">
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">関連記事も読んでみましょう</p>
+            <div class="flex flex-col gap-2">
+              <a href="character-counter-guide.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">✍️ 文字数カウント完全ガイド｜SEO・SNS・小説執筆での活用法</a>
+              <a href="image-compression-guide.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">🖼️ 画像圧縮とは？サイズを小さくする方法</a>
+              <a href="blogs.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">← ブログ一覧へ戻る</a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-1 flex flex-col gap-4">
+
+        <div class="ad-box flex-shrink-0" style="height: 250px; flex-direction: column; gap: 0.5rem;">
+          <span style="font-size: 0.75rem;">広告</span>
+          <span style="font-size: 0.75rem;">Advertisement</span>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
+          <h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 mb-3">PDF圧縮ツール</h3>
+          <a href="https://easypdfcompress.com" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1 text-sm text-indigo-600 dark:text-indigo-400 hover:underline">
+            📄 EasyPDF Compressを使う →
+          </a>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
+          <h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 mb-3">関連記事</h3>
+          <div class="flex flex-col gap-3">
+            <a href="character-counter-guide.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline leading-snug">✍️ 文字数カウント完全ガイド</a>
+            <a href="image-compression-guide.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline leading-snug">🖼️ 画像圧縮完全ガイド</a>
+            <a href="blogs.html" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">← ブログ一覧へ</a>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <div id="toast" class="toast">コピーしました</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('themeToggle');
+      function applyTheme(t) {
+        if (t === 'dark') {
+          document.documentElement.classList.add('dark');
+          if (btn) btn.textContent = '☀️';
+        } else {
+          document.documentElement.classList.remove('dark');
+          if (btn) btn.textContent = '🌙';
+        }
+      }
+      var saved = localStorage.getItem('jp_char_counter_theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      applyTheme(saved);
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var isDark = document.documentElement.classList.contains('dark');
+          var next = isDark ? 'light' : 'dark';
+          localStorage.setItem('jp_char_counter_theme', next);
+          applyTheme(next);
+        });
+      }
+    });
+  </script>
+</body>
+  </html>
+    
