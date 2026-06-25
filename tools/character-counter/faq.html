@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>よくある質問｜文字数カウント</title>
+    <meta name="description" content="文字数カウントに関するよくある質問と回答をご紹介します。">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+<header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3">
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+            <div>
+                <a href="index.html" class="block">
+                    <h1 class="text-2xl md:text-3xl font-bold">
+                        文字数カウント
+                    </h1>
+                </a>
+
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                    無料・高速な文字数カウンター＆分析ツール
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 text-sm">
+
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="about.html" class="nav-link">当サイトについて</a>
+                <a href="faq.html" class="nav-link">よくある質問</a>
+                <a href="contact.html" class="nav-link">お問い合わせ</a>
+                <a href="disclaimer.html" class="nav-link">免責事項</a>
+
+                <button id="themeToggle" class="theme-toggle">
+                    🌙
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 py-10">
+
+    <h2 class="text-3xl font-bold mb-8">
+        よくある質問
+    </h2>
+
+    <div class="space-y-6">
+
+        <div class="stat-card">
+            <h3 class="font-semibold text-lg mb-3">
+                完全に無料ですか？
+            </h3>
+
+            <p class="text-slate-600 dark:text-slate-400 leading-8">
+                はい。文字数カウントは完全無料でご利用いただけます。
+                登録費用や月額料金は一切かかりません。
+            </p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="font-semibold text-lg mb-3">
+                入力したテキストは安全ですか？
+            </h3>
+
+            <p class="text-slate-600 dark:text-slate-400 leading-8">
+                はい。テキストはブラウザ内で処理され、
+                外部サーバーへ送信されることはありません。
+                入力内容はお使いの端末内でのみ処理されます。
+            </p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="font-semibold text-lg mb-3">
+                WordやPDFは対応していますか？
+            </h3>
+
+            <p class="text-slate-600 dark:text-slate-400 leading-8">
+                現在は未対応です。
+                ただし、今後のアップデートでWordファイルや
+                PDFファイルの読み込み機能を追加予定です。
+            </p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="font-semibold text-lg mb-3">
+                バイト数はどのように計算されますか？
+            </h3>
+
+            <p class="text-slate-600 dark:text-slate-400 leading-8">
+                UTF-8の一般的な基準をもとに計算しています。
+                ASCII文字は1バイト、日本語のひらがな・カタカナ・漢字などは
+                通常3バイトとして計算されます。
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+</html>
