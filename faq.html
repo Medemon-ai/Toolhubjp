@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>よくある質問（FAQ）｜京都ツール – 無料・安全・サーバー非保存のWebツール</title>
+  <meta name="description" content="京都ツールに関するよくある質問をまとめました。料金は完全無料？データはサーバーに保存されますか？インストールは必要ですか？すべての疑問にお答えします。" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://easypdfcompress.com/faq.html" />
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "料金は本当に無料ですか？隠れた費用はありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、完全に無料です。アカウント登録も、クレジットカードの入力も不要です。京都ツールのすべての機能は、いかなる隠れコストもなく永続的に無料でご利用いただけます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "入力したデータやテキストはサーバーに保存されますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "いいえ、一切保存されません。すべての処理はお使いのブラウザ内のみで完結するクライアントサイド実行を採用しています。入力テキスト、アップロードファイル、処理結果のいずれもサーバーに送信・記録されることはありません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "新しいツールの要望や提案はできますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、ぜひお寄せください。お問い合わせフォームから「ツール提案・要望」を選択してメッセージをご送信いただけます。いただいたご要望はすべて確認し、開発優先度の検討に反映いたします。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="よくある質問（FAQ）｜京都ツール" />
+  <meta property="og:description" content="料金・プライバシー・ツール要望など、京都ツールに関する疑問を一問一答形式で解説します。" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind: config MUST be set before CDN loads -->
+  <script>
+    tailwind = {
+      config: {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Dark mode init -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <style>
+    body { font-feature-settings: "palt"; letter-spacing: 0.02em; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+    .faq-answer.open { max-height: 600px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-icon.rotated { transform: rotate(45deg); }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- ===== NAVIGATION ===== -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="./index.html" class="text-xl font-bold tracking-tight text-indigo-600 dark:text-indigo-400 shrink-0">京都ツール</a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="./index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">ホーム</a>
+        <a href="./about.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">当サイトについて</a>
+        <a href="./faq.html" class="text-indigo-600 dark:text-indigo-400 font-semibold">よくある質問</a>
+        <a href="./privacy.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">プライバシーポリシー</a>
+        <a href="./disclaimer.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">免責事項</a>
+        <a href="./contact.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">お問い合わせ</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" aria-label="テーマ切替" class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button id="mobile-menu-btn" aria-label="メニュー" class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <div class="flex flex-col px-4 py-3 gap-1 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="./index.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400">ホーム</a>
+        <a href="./about.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400">当サイトについて</a>
+        <a href="./faq.html" class="py-2 text-indigo-600 dark:text-indigo-400 font-semibold">よくある質問</a>
+        <a href="./privacy.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400">プライバシーポリシー</a>
+        <a href="./disclaimer.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400">免責事項</a>
+        <a href="./contact.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400">お問い合わせ</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+        <!-- ===== HERO ===== -->
+    <section class="pt-20 pb-14 px-4 text-center">
+      <p class="text-xs font-semibold tracking-widest uppercase text-indigo-500 mb-4">FAQ</p>
+      <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-5">よくあるご質問</h1>
+      <p class="text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto">料金・安全性・ご要望など、皆さまからよくいただく質問に一問一答形式でお答えします。</p>
+    </section>
+
+    <!-- ===== FAQ ITEMS ===== -->
+    <section class="pb-20 px-4">
+      <div class="max-w-3xl mx-auto space-y-4">
+
+        <!-- Category: 料金・利用 -->
+        <p class="text-xs font-bold tracking-widest uppercase text-indigo-500 pt-4 pb-1">料金・ご利用について</p>
+
+        <!-- Q1 -->
+        <article class="faq-item bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-7 py-6 text-left" aria-expanded="false">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/50 flex items-center justify-center text-sm font-bold text-indigo-600 dark:text-indigo-400">Q</span>
+              <h2 class="text-base font-semibold text-slate-900 dark:text-white leading-snug pt-0.5">料金は本当に無料ですか？隠れた費用はありますか？</h2>
+            </div>
+            <svg class="faq-icon shrink-0 w-5 h-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-7 pb-7 pl-[4.75rem]">
+              <div class="flex items-start gap-4">
+                <span class="shrink-0 w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-sm font-bold text-emerald-600 dark:text-emerald-400">A</span>
+                <div class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed space-y-3">
+                  <p>はい、<strong class="text-slate-800 dark:text-slate-200">完全に無料です。</strong>アカウント登録も、クレジットカードの入力も、プラン選択も一切不要です。</p>
+                  <p>京都ツールが提供するすべてのツール・機能は、いかなる隠れコストや使用制限もなく、永続的に無料でお使いいただけます。「無料期間終了後は有料」「月◯回まで無料」といった制限は存在しません。</p>
+                  <p>ブラウザを開いて、ツールにアクセスするだけ。それだけです。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+                <!-- Q2 -->
+        <article class="faq-item bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-7 py-6 text-left" aria-expanded="false">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/50 flex items-center justify-center text-sm font-bold text-indigo-600 dark:text-indigo-400">Q</span>
+              <h2 class="text-base font-semibold text-slate-900 dark:text-white leading-snug pt-0.5">インストールや会員登録は必要ですか？</h2>
+            </div>
+            <svg class="faq-icon shrink-0 w-5 h-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-7 pb-7 pl-[4.75rem]">
+              <div class="flex items-start gap-4">
+                <span class="shrink-0 w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-sm font-bold text-emerald-600 dark:text-emerald-400">A</span>
+                <div class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed space-y-3">
+                  <p><strong class="text-slate-800 dark:text-slate-200">いいえ、一切不要です。</strong>ソフトウェアのダウンロードやインストールも、メールアドレスの登録も必要ありません。</p>
+                  <p>お使いのブラウザ（Chrome・Safari・Firefox・Edgeなど）でページを開くだけで、すべてのツールをすぐにご利用いただけます。スマートフォン・タブレットでも動作します。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category: セキュリティ -->
+        <p class="text-xs font-bold tracking-widest uppercase text-indigo-500 pt-6 pb-1">セキュリティ・プライバシー</p>
+
+        <!-- Q3 -->
+        <article class="faq-item bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-7 py-6 text-left" aria-expanded="false">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/50 flex items-center justify-center text-sm font-bold text-indigo-600 dark:text-indigo-400">Q</span>
+              <h2 class="text-base font-semibold text-slate-900 dark:text-white leading-snug pt-0.5">入力したデータやテキストはサーバーに保存されますか？</h2>
+            </div>
+            <svg class="faq-icon shrink-0 w-5 h-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-7 pb-7 pl-[4.75rem]">
+              <div class="flex items-start gap-4">
+                <span class="shrink-0 w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-sm font-bold text-emerald-600 dark:text-emerald-400">A</span>
+                <div class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed space-y-3">
+                  <p><strong class="text-slate-800 dark:text-slate-200">いいえ、一切保存・送信されません。</strong>京都ツールのすべての処理は、100%クライアントサイド（お使いのブラウザ内）で完結します。</p>
+                  <p>入力したテキスト、アップロードしたPDF・画像ファイル、処理後の結果データ——これらはすべて、お使いのデバイスのメモリ内のみで処理され、私たちのサーバーには一切送信・記録されません。</p>
+                  <div class="bg-indigo-50 dark:bg-indigo-900/30 rounded-xl px-5 py-4 mt-3">
+                    <p class="text-xs font-semibold text-indigo-700 dark:text-indigo-300 mb-2">技術的な裏付け</p>
+                    <ul class="text-xs text-indigo-600 dark:text-indigo-400 space-y-1 list-disc list-inside">
+                      <li>PDF処理：PDF.js + pdf-lib によるブラウザ内完結処理</li>
+                      <li>画像圧縮：Canvas API による完全ローカル処理</li>
+                      <li>文字数カウント：JavaScriptによるリアルタイム処理</li>
+                      <li>ネットワーク通信：ツール利用中のデータ送信ゼロ</li>
+                    </ul>
+                  </div>
+                  <p>機密書類や個人情報を含むファイルも、安心してご利用いただけます。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q4 -->
+        <article class="faq-item bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-7 py-6 text-left" aria-expanded="false">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/50 flex items-center justify-center text-sm font-bold text-indigo-600 dark:text-indigo-400">Q</span>
+              <h2 class="text-base font-semibold text-slate-900 dark:text-white leading-snug pt-0.5">使用履歴やIPアドレスは記録されますか？</h2>
+            </div>
+            <svg class="faq-icon shrink-0 w-5 h-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-7 pb-7 pl-[4.75rem]">
+              <div class="flex items-start gap-4">
+                <span class="shrink-0 w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-sm font-bold text-emerald-600 dark:text-emerald-400">A</span>
+                <div class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed space-y-3">
+                  <p>サイトのアクセス解析（ページビュー数の集計など）には一般的な匿名集計ツールを利用している場合がありますが、<strong class="text-slate-800 dark:text-slate-200">個人を特定できる形式での情報収集は行っていません。</strong></p>
+                  <p>詳細は<a href="./privacy.html" class="text-indigo-600 dark:text-indigo-400 hover:underline">プライバシーポリシー</a>をご確認ください。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category: ご要望・その他 -->
+        <p class="text-xs font-bold tracking-widest uppercase text-indigo-500 pt-6 pb-1">ご要望・その他</p>
+
+        <!-- Q5 -->
+        <article class="faq-item bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-7 py-6 text-left" aria-expanded="false">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/50 flex items-center justify-center text-sm font-bold text-indigo-600 dark:text-indigo-400">Q</span>
+              <h2 class="text-base font-semibold text-slate-900 dark:text-white leading-snug pt-0.5">新しいツールの要望や提案は可能ですか？</h2>
+            </div>
+            <svg class="faq-icon shrink-0 w-5 h-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-7 pb-7 pl-[4.75rem]">
+              <div class="flex items-start gap-4">
+                <span class="shrink-0 w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-sm font-bold text-emerald-600 dark:text-emerald-400">A</span>
+                <div class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed space-y-3">
+                  <p><strong class="text-slate-800 dark:text-slate-200">はい、ぜひお寄せください。</strong>ツールの改善や新機能のアイデアは、私たちにとって非常に重要なフィードバックです。</p>
+                  <p><a href="./contact.html" class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">お問い合わせフォーム</a>の「お問い合わせ種別」から「ツール提案・要望」を選択し、ご希望の内容をお送りください。いただいたご提案はすべて確認し、今後の開発優先度の検討に活かしてまいります。</p>
+                  <p>「こんなツールがあれば仕事が楽になるのに」という声が、次の機能を生み出す原動力になります。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Q6 -->
+        <article class="faq-item bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-7 py-6 text-left" aria-expanded="false">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/50 flex items-center justify-center text-sm font-bold text-indigo-600 dark:text-indigo-400">Q</span>
+              <h2 class="text-base font-semibold text-slate-900 dark:text-white leading-snug pt-0.5">スマートフォンやタブレットでも使えますか？</h2>
+            </div>
+            <svg class="faq-icon shrink-0 w-5 h-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="px-7 pb-7 pl-[4.75rem]">
+              <div class="flex items-start gap-4">
+                <span class="shrink-0 w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-sm font-bold text-emerald-600 dark:text-emerald-400">A</span>
+                <div class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                  <p><strong class="text-slate-800 dark:text-slate-200">はい、すべてのデバイスでご利用いただけます。</strong>京都ツールはレスポンシブデザインで設計されており、スマートフォン・タブレット・PCのいずれでも快適に動作します。最新のブラウザさえあれば、追加の設定は一切不要です。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACT CTA ===== -->
+    <section class="py-16 px-4 bg-slate-50 dark:bg-slate-900/50">
+      <div class="max-w-xl mx-auto text-center">
+        <p class="text-2xl font-bold text-slate-900 dark:text-white mb-3">解決しない疑問がありましたか？</p>
+        <p class="text-slate-500 dark:text-slate-400 mb-8">お問い合わせフォームからいつでもご連絡ください。確認次第、順次ご回答いたします。</p>
+        <a href="./contact.html" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
+          お問い合わせはこちら
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
+      <p class="font-semibold text-slate-700 dark:text-slate-300">京都ツール</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="./privacy.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">プライバシーポリシー</a>
+        <a href="./disclaimer.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">免責事項</a>
+        <a href="./contact.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">お問い合わせ</a>
+      </div>
+      <p>&copy; 2025 京都ツール. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+
+        // Mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = trigger.querySelector('.faq-icon');
+        const isOpen = answer.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-answer.open').forEach(el => el.classList.remove('open'));
+        document.querySelectorAll('.faq-icon.rotated').forEach(el => el.classList.remove('rotated'));
+        document.querySelectorAll('.faq-trigger').forEach(el => el.setAttribute('aria-expanded', 'false'));
+
+        if (!isOpen) {
+          answer.classList.add('open');
+          icon.classList.add('rotated');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+    
+    
