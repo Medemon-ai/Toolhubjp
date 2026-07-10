@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /*.json$
+Disallow: /tmp/
+
+Sitemap: https://toolsnihon.com/sitemap.xml
